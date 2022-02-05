@@ -18,7 +18,7 @@ npm run build
 ### Lints and fixes files
 ```
 npm run lint
-```
+```npm install @popperjs/core
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
