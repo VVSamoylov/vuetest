@@ -1,8 +1,4 @@
-import { createApp } from "vue";
-import App from "./App.vue";
-import "bootstrap/dist/css/bootstrap.css";
-// This imports <b-modal> as well as the v-b-modal directive as a plugin:
+import { createApp } from 'vue'
+import App from './App.vue'
 
-
-createApp(App).mount("#app");
-import "bootstrap/dist/js/bootstrap.js";
+createApp(App).mount('#app')

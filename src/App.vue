@@ -1,24 +1,22 @@
 <template>
-  <div class="container">
-    <NavBar/>
-    <HelloWorld msg="Welcome to Your Vue.js App" />
-    <MyModal/>
-  </div>
+ 
+  <NavBar/>
+  
+  <trafficLights title="Привет!"/>
+  
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
-import NavBar from  "@/components/NavBar";
+import NavBar from '@/components/NavBar';
+import trafficLights from '@/components/trafficLights';
 
- //eslint-disable-next-line
 export default {
-  name: "App",
+  name: 'App',
   components: {
-    HelloWorld,
     NavBar,
-    
-  },
-};
+    trafficLights
+  }
+}
 </script>
 
 <style>
@@ -28,6 +26,6 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 0px;
+  margin-top: 60px;
 }
 </style>

@@ -1,36 +1,51 @@
 <template>
-  <div class="row justify-content-center">
-    <div class="col-4 proj">
-      <fonar color="red.jpg"/>
-      <fonar color="green.jpg"/>
-      <fonar color="yellow.jpg"/>
-    </div>
+  <div v-if="dsp" >
+    <p> Имя {{fname}} </p>
+    <p> Отчество {{lname}}</p>
+    <button type="button" class="btn btn-primary" @click="changeName" > Изменить </button>
+  </div>
+  <br/>
+  <div>
+    <button type="button" class="btn btn-secondary" @click="stels" >{{dsp? "Спрятать" : "Показать"}}</button>
   </div>
 </template>
 
 <script>
-import fonar from '@/components/fonar.vue';
 export default {
-  name: "HelloWorld",
-  props: {
-    msg: String,
+  name: 'HelloWorld',
+  data(){
+    return {
+      fname: 'Полиграф',
+      lname: 'Полиграфович',
+      dsp: true
+    }
   },
-  components:{
-    fonar
-  },
-};
+  methods: {
+    changeName(){
+      this.fname = "Иван";
+      this.lname = "Иваныч";
+    },
+    stels(){
+        this.dsp = !this.dsp;
+    } 
+  }
+}
 </script>
 
-
+<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.proj {
-  margin-top: 50px;
-  padding-top:10px ;
-  border-width: 5px;
-  border-color: black;
-  border-style: solid;
-  width: 200px;
-  height: 400px;
+h3 {
+  margin: 40px 0 0;
 }
-
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+li {
+  display: inline-block;
+  margin: 0 10px;
+}
+a {
+  color: #42b983;
+}
 </style>
